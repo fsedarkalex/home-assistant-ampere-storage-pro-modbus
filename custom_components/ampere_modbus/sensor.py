@@ -391,4 +391,28 @@ SENSOR_TYPES: dict[str, list[AmpereModbusSensorEntityDescription]] = {
         icon="mdi:information-outline",
         entity_registry_enabled_default=True,
     ),
+    "L1Power": AmpereModbusSensorEntityDescription(
+        name="L1 Power",
+        key="l1power",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        icon="mdi:flash",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
+    "L2Power": AmpereModbusSensorEntityDescription(
+        name="L2 Power",
+        key="l2power",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        icon="mdi:flash",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
+    "L3Power": AmpereModbusSensorEntityDescription(
+        name="L3 Power",
+        key="l3power",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        icon="mdi:flash",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
 }
